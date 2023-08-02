@@ -1,0 +1,6 @@
+name: SimpleTimer
+main: org.lone64.simpletimer.STimer
+author: lone64
+version: 1.0.1
+api-version: '1.19'
+description: 타이머 시스템 플러그인

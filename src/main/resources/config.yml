@@ -1,0 +1,11 @@
+# 타이머 시스템을 활성화/비활성화할 것 인지
+enabled: false
+
+# 타이머가 작동되는 월드
+world: "world"
+
+# 밣으면 타이머가 시작되게 할 블럭
+start-block: "GOLD_BLOCK"
+
+# 밣으면 타이머가 종료되게 할 블럭
+stop-block: "DIAMOND_BLOCK"
