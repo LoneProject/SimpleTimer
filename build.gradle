@@ -4,6 +4,20 @@ plugins {
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
+
+shadowJar {
+    archiveBaseName.set('SimpleTimer')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+}
+
+jar {
+    finalizedBy shadowJar
+}
+
 group = "org.lone64.simpletimer"
 
 repositories {
@@ -19,25 +33,8 @@ repositories {
 }
 
 dependencies {
-    // SPIGOT DEPENDENCIES
     compileOnly "org.spigotmc:spigot-api:1.19-R0.1"
     compileOnly "net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT"
-
-    // LIBRARY DEPENDENCIES
     compileOnly "org.projectlombok:lombok:1.18.26"
     annotationProcessor "org.projectlombok:lombok:1.18.26"
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = "UTF-8"
-}
-
-shadowJar {
-    archiveBaseName.set('SimpleTimer')
-    archiveClassifier.set('')
-    archiveVersion.set('')
-}
-
-jar {
-    finalizedBy shadowJar
 }
