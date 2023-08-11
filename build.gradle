@@ -23,13 +23,8 @@ group = "org.lone64.simpletimer"
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        url = "https://oss.sonatype.org/content/repositories/snapshots"
-    }
-    maven {
-        url = "https://repo.loneproject.org/repository/maven-public/"
-        allowInsecureProtocol = true
-    }
+    maven { url = "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url = "https://repo.loneproject.org/repository/maven-public/" }
 }
 
 dependencies {
